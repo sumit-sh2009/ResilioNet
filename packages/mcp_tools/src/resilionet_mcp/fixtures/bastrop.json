@@ -1,0 +1,25 @@
+{
+  "county": "Bastrop County, TX",
+  "balancing_authority": "ERCOT",
+  "snapshot_date": "2024-07-08T18:00:00Z",
+  "grid": {
+    "demand_mw": 42000,
+    "generation_mw": 40000,
+    "net_interchange_mw": 2000
+  },
+  "hazard": {
+    "name": "Colorado River flood",
+    "min_lat": 30.05,
+    "max_lat": 30.12,
+    "min_lon": -97.4,
+    "max_lon": -97.3
+  },
+  "routes": {
+    "short": [[30.11, -97.32], [30.08, -97.35], [30.06, -97.38]],
+    "detour": [[30.2, -97.32], [30.18, -97.45], [30.06, -97.5]]
+  },
+  "travel": [
+    {"zip": "78602", "minutes": 28, "empower": 42, "lat": 30.11, "lon": -97.315},
+    {"zip": "78612", "minutes": 12, "empower": 5, "lat": 30.25, "lon": -97.2}
+  ]
+}
