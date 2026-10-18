@@ -1,16 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ResilioNet — Bastrop dispatch</title>
+    <meta name="theme-color" content="#171e19" />
+    <title>ResilioNet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@500,700&display=swap" rel="stylesheet" />
+    <script>
+      try {
+        var stored = localStorage.getItem("resilionet.theme.v1")
+        if (stored === "light" || stored === "dark") {
+          document.documentElement.dataset.theme = stored
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute("content", stored === "light" ? "#f4f7f3" : "#171e19")
+        }
+      } catch (error) {
+        /* keep the dark board if storage is blocked */
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
